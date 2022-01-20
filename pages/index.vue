@@ -77,7 +77,9 @@
         </v-card-actions>
       </v-card>
     </v-col>
+    {{ popularMovies }}
   </v-row>
+
 </template>
 
 <script>
