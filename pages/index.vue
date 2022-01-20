@@ -79,7 +79,6 @@
     </v-col>
     {{ popularMovies }}
   </v-row>
-
 </template>
 
 <script>
