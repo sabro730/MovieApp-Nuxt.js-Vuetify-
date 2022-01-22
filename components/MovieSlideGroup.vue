@@ -18,7 +18,11 @@
                   <h3 class="centeredH3">{{ movie.vote_average }} / 10</h3>
                   <h3 class="centeredH3">{{ movie.genre_id_strings[0] }}</h3>
 
-                  <v-btn :to="`details/${type}/${movie.id}`" color="green darken-2">View Details</v-btn>
+                  <v-btn
+                    :to="`details/${type}/${movie.id}`"
+                    color="green darken-2"
+                    >View Details</v-btn
+                  >
                 </v-overlay>
               </v-fade-transition>
             </v-card>
@@ -61,7 +65,6 @@ export default {
     getTitle(item) {
       return item.title || item.name
     },
-
   },
 }
 </script>
