@@ -17,8 +17,10 @@
                 <v-overlay v-if="hover" absolute color="#036358">
                   <h3 class="centeredH3">{{ movie.vote_average }} / 10</h3>
                   <h3 class="centeredH3">{{ movie.genre_id_strings[0] }}</h3>
-
+                  <h3 class="centeredH3">{{ getReleaseYear(movie) }}</h3>
                   <v-btn
+                    small
+                    class="ma-5"
                     :to="`details/${type}/${movie.id}`"
                     color="green darken-2"
                     >View Details</v-btn
@@ -64,6 +66,11 @@ export default {
   methods: {
     getTitle(item) {
       return item.title || item.name
+    },
+
+    getReleaseYear(item) {
+      const year = item.release_date || item.first_air_date
+      return year.substring(0, 4)
     },
   },
 }
