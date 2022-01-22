@@ -11,20 +11,29 @@
         :key="movie.id"
         v-slot="{ active, toggle }"
       >
-        <v-card
-          :color="active ? undefined : 'grey darken-3'"
-          class="ma-4"
-          height="400px"
-          width="220px"
-          @click="toggle"
-        >
-          <v-img
-            class="white--text align-end"
-            :src="posterUrl + movie.backdrop_path"
-          >
-          </v-img>
-          <h3 class="ma-2">{{ movie.title }}</h3>
-        </v-card>
+        <v-hover>
+          <template #default="{ hover }">
+            <v-card
+              :color="active ? 'primary darken-3' : 'white'"
+              class="ma-4"
+              width="230px"
+              @click="toggle"
+            >
+              <v-img
+                height="330px"
+                width="220px"
+                :src="posterUrl + movie.poster_path"
+              >
+              </v-img>
+
+              <v-fade-transition>
+                <v-overlay v-if="hover" absolute color="#036358">
+                  <v-btn>See more info</v-btn>
+                </v-overlay>
+              </v-fade-transition>
+            </v-card>
+          </template>
+        </v-hover>
       </v-slide-item>
     </v-slide-group>
   </v-sheet>
@@ -44,6 +53,12 @@ export default {
     posterUrl: 'https://image.tmdb.org/t/p/w220_and_h330_face',
   }),
 
+  methods: {
+    getTitle(item) {
+      return item.title || item.name
+    },
+  },
+
   // async fetch() {
   //   await this.$axios.get("/configuration" + process.env.API_KEY)
   //     .then(response => {
@@ -55,7 +70,8 @@ export default {
 
 <style>
 .v-card {
-  overflow: hidden;
+  background: #26db26 !important;
+  border: 6px solid red !important;
 }
 
 h3 {
