@@ -1,20 +1,11 @@
 <template>
   <v-sheet class="mx-auto" elevation="8">
-    <v-slide-group
-      v-model="model"
-      class="pa-4"
-      active-class="indigo darken-3"
-      show-arrows
-    >
-      <v-slide-item
-        v-for="movie in movies"
-        :key="movie.id"
-        v-slot="{ active, toggle }"
-      >
+    <v-slide-group v-model="model" class="pa-4" show-arrows>
+      <v-slide-item v-for="movie in movies" :key="movie.id" v-slot="{ toggle }">
         <v-hover>
           <template #default="{ hover }">
             <v-card
-              :color="active ? 'primary darken-3' : 'white'"
+              :color="hover ? 'green darken-2' : 'white'"
               class="ma-4"
               width="230px"
               @click="toggle"
@@ -70,12 +61,7 @@ export default {
 
 <style>
 .v-card {
-  background: #26db26 !important;
-  border: 6px solid red !important;
+  border: 6px solid !important;
 }
 
-h3 {
-  text-shadow: 0 0 10px #000; /* horizontal-offset vertical-offset 'blur' colour */
-  word-break: inherit;
-}
 </style>
