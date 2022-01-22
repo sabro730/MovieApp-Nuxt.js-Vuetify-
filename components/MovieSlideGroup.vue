@@ -7,19 +7,18 @@
             <v-card
               :color="hover ? 'green darken-2' : 'white'"
               class="ma-4"
-              width="230px"
+              width="160px"
               @click="toggle"
             >
-              <v-img
-                height="330px"
-                width="220px"
-                :src="posterUrl + movie.poster_path"
-              >
+              <v-img width="150px" :src="posterUrl + movie.poster_path">
               </v-img>
 
               <v-fade-transition>
                 <v-overlay v-if="hover" absolute color="#036358">
-                  <v-btn>See more info</v-btn>
+                  <h3 class="centeredH3">{{ movie.vote_average }} / 10</h3>
+                  <h3 class="centeredH3">{{ movie.genre_id_strings[0] }}</h3>
+
+                  <v-btn color="green darken-2">View Details</v-btn>
                 </v-overlay>
               </v-fade-transition>
             </v-card>
@@ -31,6 +30,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   props: {
     movies: {
@@ -44,18 +45,25 @@ export default {
     posterUrl: 'https://image.tmdb.org/t/p/w220_and_h330_face',
   }),
 
+  computed: {
+    ...mapGetters({
+      movieGenres: 'movieGenres',
+      tvGenres: 'tvGenres',
+    }),
+  },
+
   methods: {
     getTitle(item) {
       return item.title || item.name
     },
-  },
 
-  // async fetch() {
-  //   await this.$axios.get("/configuration" + process.env.API_KEY)
-  //     .then(response => {
-  //       console.log(response)
-  //     })
-  // }
+    getGenre() {
+      // const genres = item.genre_ids.map(id => this.movieGenres[id])
+      // return genres.join(', ')
+      console.log('tvgenres: ', this.tvGenres)
+      console.log('moviesgenres: ', this.movieGenres)
+    },
+  },
 }
 </script>
 
@@ -64,4 +72,7 @@ export default {
   border: 6px solid !important;
 }
 
+.centeredH3 {
+  text-align: center;
+}
 </style>
