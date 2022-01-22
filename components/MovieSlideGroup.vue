@@ -18,7 +18,7 @@
                   <h3 class="centeredH3">{{ movie.vote_average }} / 10</h3>
                   <h3 class="centeredH3">{{ movie.genre_id_strings[0] }}</h3>
 
-                  <v-btn color="green darken-2">View Details</v-btn>
+                  <v-btn :to="`details/${type}/${movie.id}`" color="green darken-2">View Details</v-btn>
                 </v-overlay>
               </v-fade-transition>
             </v-card>
@@ -37,6 +37,11 @@ export default {
     movies: {
       type: Array,
       default: () => [],
+    },
+
+    type: {
+      type: String,
+      default: 'movie',
     },
   },
 
@@ -57,12 +62,6 @@ export default {
       return item.title || item.name
     },
 
-    getGenre() {
-      // const genres = item.genre_ids.map(id => this.movieGenres[id])
-      // return genres.join(', ')
-      console.log('tvgenres: ', this.tvGenres)
-      console.log('moviesgenres: ', this.movieGenres)
-    },
   },
 }
 </script>

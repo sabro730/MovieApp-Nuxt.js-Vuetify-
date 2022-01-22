@@ -3,14 +3,14 @@
     <v-row justify="center" align="center">
       <v-col md="10">
         <h1>Popular Movies</h1>
-        <movie-slide-group :movies="popularMovies" />
+        <movie-slide-group :movies="popularMovies" :type="'movie'" />
       </v-col>
     </v-row>
 
     <v-row justify="center" align="center">
       <v-col md="10">
         <h1>Popular TV Shows</h1>
-        <movie-slide-group :movies="popularTv" />
+        <movie-slide-group :movies="popularTv" :type="'tv'"/>
       </v-col>
     </v-row>
   </v-container>
