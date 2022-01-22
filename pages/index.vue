@@ -1,15 +1,15 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row justify="center" align="center">
-      <v-col>
+      <v-col md="10">
         <h1>Popular Movies</h1>
         <movie-slide-group :movies="popularMovies" />
       </v-col>
     </v-row>
 
     <v-row justify="center" align="center">
-      <v-col>
-        <h1>Popular Shows</h1>
+      <v-col md="10">
+        <h1>Popular TV Shows</h1>
         <movie-slide-group :movies="popularTv" />
       </v-col>
     </v-row>
@@ -37,10 +37,10 @@ export default {
     ...mapGetters({
       popularMovies: 'popularMovies',
       popularTv: 'popularTv',
+      movieGenres: 'movieGenres',
+      tvGenres: 'tvGenres',
     }),
   },
-
-  created() {},
 
   methods: {
     ...mapActions({
