@@ -11,7 +11,7 @@ export const mutations = {
   SET_POPULAR_TV(state, payload) {
     console.log('SET_POPULAR_TV', payload)
     state.popularTv = payload
-  }
+  },
 }
 
 export const actions = {
@@ -29,7 +29,7 @@ export const actions = {
       .then((response) => {
         commit('SET_POPULAR_TV', response.data.results)
       })
-  }
+  },
 }
 
 export const getters = {
