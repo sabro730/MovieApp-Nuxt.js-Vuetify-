@@ -9,6 +9,13 @@
             <em>&mdash;John Johnson</em>
           </small>
         </footer>
+
+                    <a
+              :href="`https://github.com/mokumus/MovieApp`"
+              target="_blank"
+            >
+            <h4> https://github.com/mokumus/MovieApp </h4>
+            </a>
       </blockquote>
     </v-col>
   </v-row>
@@ -19,3 +26,11 @@ export default {
   name: 'InspirePage',
 }
 </script>
+
+<style>
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2f32dd;
+}
+</style>
