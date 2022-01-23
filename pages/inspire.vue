@@ -10,12 +10,9 @@
           </small>
         </footer>
 
-                    <a
-              :href="`https://github.com/mokumus/MovieApp`"
-              target="_blank"
-            >
-            <h4> https://github.com/mokumus/MovieApp </h4>
-            </a>
+        <a :href="`https://github.com/mokumus/MovieApp`" target="_blank">
+          <h4>https://github.com/mokumus/MovieApp</h4>
+        </a>
       </blockquote>
     </v-col>
   </v-row>
