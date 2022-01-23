@@ -8,6 +8,10 @@ export default {
     fallback: true,
   },
 
+  generate: {
+    fallback: '404.html',
+  },
+
   env: {
     API_KEY: process.env.API_KEY || '',
   },
