@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .v-card {
   border: 6px solid !important;
 }
