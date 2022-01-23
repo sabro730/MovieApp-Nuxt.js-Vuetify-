@@ -5,6 +5,7 @@ export default {
 
   router: {
     base: '/MovieApp/',
+    fallback: true
   },
 
   env: {
