@@ -1,11 +1,11 @@
 <template>
-  <v-sheet class="mx-auto" elevation="8">
+  <v-sheet class="mx-auto" flat color="transparent">
     <v-slide-group v-model="model" class="pa-4" show-arrows>
       <v-slide-item v-for="movie in movies" :key="movie.id" v-slot="{ toggle }">
         <v-hover>
           <template #default="{ hover }">
             <v-card
-              :color="hover ? 'green darken-2' : 'white'"
+              :color="hover ? 'teal lighten-2' : 'white'"
               class="ma-4"
               width="160px"
               @click="toggle"
@@ -22,7 +22,7 @@
                     small
                     class="ma-5"
                     :to="`details/${type}/${movie.id}`"
-                    color="green darken-2"
+                    color="teal"
                     >View Details</v-btn
                   >
                 </v-overlay>

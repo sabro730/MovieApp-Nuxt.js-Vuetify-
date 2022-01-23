@@ -27,7 +27,7 @@
                   small
                   tile
                   :to="`details/movie/${movie.id}`"
-                  color="green darken-2"
+                  color="teal"
                   >View Details</v-btn
                 >
                 
