@@ -12,10 +12,10 @@
           <v-row class="fill-height" align="center" justify="center">
             <div class="leftInfo">
               <v-card flat color="transparent">
-                <h1 class="bigTitle">{{getTitle(movie)}}</h1>
-                <p class="shorten mr-15 pr-15">{{movie.overview}}</p>
+                <h1 class="bigTitle">{{ getTitle(movie) }}</h1>
+                <p class="shorten mr-15 pr-15">{{ movie.overview }}</p>
                 <v-rating
-                  :value="movie.vote_average/2"
+                  :value="movie.vote_average / 2"
                   half-increments
                   background-color="orange lighten-3"
                   color="orange"
@@ -23,14 +23,9 @@
                   readonly
                   class="ml-n3"
                 ></v-rating>
-                <v-btn
-                  small
-                  tile
-                  :to="`details/movie/${movie.id}`"
-                  color="teal"
+                <v-btn small tile :to="`details/movie/${movie.id}`" color="teal"
                   >View Details</v-btn
                 >
-                
               </v-card>
             </div>
           </v-row>
@@ -51,7 +46,6 @@ export default {
   data: () => ({
     posterUrl: 'https://image.tmdb.org/t/p/original',
   }),
-
 
   methods: {
     getTitle(item) {
@@ -87,16 +81,16 @@ export default {
   );
 }
 
-.bigTitle{
+.bigTitle {
   font-size: 3rem;
   font-weight: 400;
   color: #fff;
 }
 
-p.shorten{
-     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden; 
+p.shorten {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>

@@ -5,7 +5,7 @@
     </template>
 
     <v-list dense color="indigo">
-      <v-list-item v-for="item in items" :key="item.title" :to="item.to" >
+      <v-list-item v-for="item in items" :key="item.title" :to="item.to">
         <v-list-item-action>
           <v-icon color="teal lighten-2">{{ item.icon }}</v-icon>
         </v-list-item-action>

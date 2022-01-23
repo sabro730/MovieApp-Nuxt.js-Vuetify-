@@ -46,11 +46,13 @@
                   .join(', ')
               }}
             </v-card-text>
-              
-              <a :href="`https://www.imdb.com/title/${movie.imdb_id}`" target="_blank">
-              <img class="ml-4" src='~/static/logo-imdb.svg'>
-              </a>
-              
+
+            <a
+              :href="`https://www.imdb.com/title/${movie.imdb_id}`"
+              target="_blank"
+            >
+              <img class="ml-4" src="~/static/logo-imdb.svg" />
+            </a>
           </v-card>
         </v-sheet>
       </v-col>
@@ -114,7 +116,6 @@ export default {
   },
 }
 </script>
-
 
 <style>
 .bigTitle {

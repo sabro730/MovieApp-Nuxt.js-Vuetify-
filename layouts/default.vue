@@ -7,7 +7,7 @@
         <h6 class="mt-6 ml-2">by mokumus &copy;</h6>
       </v-btn>
       <v-spacer></v-spacer>
-      <navigation-dropdown-menu/> 
+      <navigation-dropdown-menu />
     </v-app-bar>
     <v-main>
       <v-container>
@@ -21,7 +21,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'DefaultLayout',
   data() {
@@ -43,12 +42,12 @@ export default {
 }
 
 .v-application {
-  background: url("./static/bg.png") no-repeat center center fixed !important;
+  background: url('./static/bg.png') no-repeat center center fixed !important;
   background-size: cover;
 }
 
 .v-application .purple.darken-4 {
-    background-color: #4a148c6e !important;
-    border-color: #4a148c !important;
+  background-color: #4a148c6e !important;
+  border-color: #4a148c !important;
 }
 </style>
