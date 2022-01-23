@@ -84,6 +84,9 @@ export default {
       $axios.get(queryString2),
     ])
     console.log(movie, credits)
+    if (!movie || !credits) {
+      redirect('/')
+    }
     return {
       movie: movie.data,
       cast: credits.data.cast,
