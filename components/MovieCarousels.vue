@@ -8,7 +8,7 @@
   >
     <v-carousel-item v-for="(movie, i) in movies" :key="i">
       <v-sheet height="100%">
-        <v-img height="600px" :src="posterUrl + movie.backdrop_path">
+        <v-img height="700px" :src="posterUrl + movie.backdrop_path">
           <v-row class="fill-height" align="center" justify="center">
             <div class="leftInfo">
               <v-card flat color="transparent">
@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .leftInfo {
   position: absolute;
   top: 0;
