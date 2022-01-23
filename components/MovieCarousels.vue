@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .leftInfo {
   position: absolute;
   top: 0;
