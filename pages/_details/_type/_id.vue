@@ -2,13 +2,12 @@
   <v-container fluid>
     <v-row>
       <v-col cols="12" md="3">
-        <v-sheet height="60vh" rounded="lg">
-          <v-img height="60vh" :src="getPoster(movie)"> </v-img>
-        </v-sheet>
+        <v-img height="100%" contain class="poster" :src="getPoster(movie)">
+        </v-img>
       </v-col>
 
       <v-col cols="12" md="9">
-        <v-sheet height="60vh" rounded="lg">
+        <v-sheet height="100%" rounded="lg">
           <v-card flat color="transparant">
             <h1 class="bigTitle ml-4">{{ getTitle(movie) }}</h1>
             <h3 class="italicTagline ml-4">{{ movie.tagline }}</h3>
